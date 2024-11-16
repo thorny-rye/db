@@ -24,7 +24,7 @@ for i in range(1, 11, 2):
 for i in range(1, 11, 3):
     cursor.execute('DELETE FROM Users WHERE id = ?', (f'{i}', ))
 
-cursor.execute('SELECT * FROM Users ')
+cursor.execute('SELECT * FROM Users WHERE age != 60 ')
 users = cursor.fetchall()
 
 for user in users:
