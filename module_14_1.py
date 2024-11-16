@@ -13,16 +13,16 @@ balance INTEGER NOT NULL
 )
 ''')
 
-#for i in range(1, 11):
-#    cursor.execute('INSERT INTO Users (username, email, age, balance) VALUES (?, ?, ?, ?)',
-#                   (f'User{i}', f'example{i}@gmail.com', i * 10, 1000))
+for i in range(1, 11):
+    cursor.execute('INSERT INTO Users (username, email, age, balance) VALUES (?, ?, ?, ?)',
+                   (f'User{i}', f'example{i}@gmail.com', i * 10, 1000))
 
-#for i in range(1, 11, 2):
-#    cursor.execute('UPDATE Users SET balance = 500 WHERE id = ? ', (f'{i}'))
+for i in range(1, 11, 2):
+    cursor.execute('UPDATE Users SET balance = 500 WHERE id = ? ', (f'{i}'))
 
 
-#for i in range(1, 11, 3):
-#    cursor.execute('DELETE FROM Users WHERE id = ?', (f'{i}', ))
+for i in range(1, 11, 3):
+    cursor.execute('DELETE FROM Users WHERE id = ?', (f'{i}', ))
 
 cursor.execute('SELECT * FROM Users ')
 users = cursor.fetchall()
